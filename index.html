@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valorant喜好問卷</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            text-align: center;
+        }
+        .container {
+            width: 50%;
+            margin: 0 auto;
+            border: 1px solid #ccc;
+            padding: 20px;
+            border-radius: 5px;
+            text-align: left;
+        }
+        .title {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        label {
+            display: block;
+            margin-top: 10px;
+        }
+        textarea, select, input {
+            width: 100%;
+            padding: 5px;
+            margin-top: 5px;
+        }
+        .buttons {
+            margin-top: 10px;
+        }
+        iframe {
+            width: 100%;
+            height: 500px;
+            border: none;
+        }
+        /* 影片區塊 */
+        .video-container {
+            margin-top: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        video {
+            max-width: 640px; /* 限制最大寬度 */
+            width: 100%;
+            height: auto;
+            border-radius: 10px; /* 圓角設計 */
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <p class="title">VALORANT 特務喜好調查表</p>
+        <form action="submit.php" method="post">
+            <label for="rank">牌位：</label>
+            <input type="text" id="rank" name="rank" placeholder="請輸入您的牌位">
+
+            <label for="id">ID：</label>
+            <input type="text" id="id" name="id" placeholder="請輸入您的 ID">
+
+            <label for="agent">您最喜歡的特務？</label>
+            <select id="agent" name="agent[]" multiple>
+                <option value="reyna">Reyna</option>
+                <option value="jett">Jett</option>
+                <option value="clove">Clove</option>
+                <option value="viper">Viper</option>
+            </select>
+
+            <div class="buttons">
+                <button type="submit">提交</button>
+                <button type="reset">重設</button>
+            </div>
+        </form>
+    </div>
+
+    <h2>特務喜好調查表</h2>
+    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdRIZTMYDM0B7GKBt7tFZzREpSpSD4mfll1vSXxxMxxllo9yQ/viewform?embedded=true"></iframe>
+
+    <h2>附上帥帥的遊戲畫面</h2>
+<div style="max-width: 800px; margin: auto;">
+    <iframe loading="lazy" width="640" height="360" 
+        src="https://www.canva.com/design/DAGhk3iEPpc/vIqmxHG1nH-4K4HyZAmtbQ/watch?embed" 
+        allowfullscreen allow="fullscreen">
+    </iframe>
+</div>
+
+
+</body>
+</html>
